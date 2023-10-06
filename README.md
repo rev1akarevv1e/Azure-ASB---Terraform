@@ -31,7 +31,7 @@ It is also possible to implement versioning using git, please see the variable f
 # WK_task 2
 
 ASCII like "back of the napkin" diagram for observability. 
-
+`
 +-------------------------------------------------+|
 |             Observability Platform               |
 |                                                  |
@@ -67,3 +67,4 @@ ASCII like "back of the napkin" diagram for observability.
 |  +----------------------------------------------+|
 |                                                  |
 +-------------------------------------------------+|
+`
