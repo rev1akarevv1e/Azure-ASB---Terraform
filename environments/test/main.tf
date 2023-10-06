@@ -2,13 +2,27 @@ provider "azurerm" {
   features {}
 }
 
-module "resource_group" {
+module "resource_group1" {
   source = "../../modules/resource_group"
 
-  environment = "test"
+  environment = "test1"
   label_order = ["name", "environment", ]
 
   name     = "test1"
+  location = "North Europe"
+
+  #resource lock
+  resource_lock_enabled = true
+  lock_level            = "CanNotDelete"
+}
+
+module "resource_group2" {
+  source = "../../modules/resource_group"
+
+  environment = "test2"
+  label_order = ["name", "environment", ]
+
+  name     = "test2"
   location = "North Europe"
 
   #resource lock
@@ -24,8 +38,8 @@ module "service_bus1" {
   cost_centre = "test"
   resource_lock_enabled = true
 
-  resource_group_name = module.resource_group.resource_group_name
-  location            = module.resource_group.resource_group_location
+  resource_group_name = module.resource_group1.resource_group_name
+  location            = module.resource_group1.resource_group_location
 
   queues = [
     {
@@ -58,8 +72,8 @@ module "service_bus2" {
   resource_lock_enabled = true
   cost_centre = "test2"
 
-  resource_group_name = module.resource_group.resource_group_name
-  location            = module.resource_group.resource_group_location
+  resource_group_name = module.resource_group2.resource_group_name
+  location            = module.resource_group2.resource_group_location
 
   queues = [
     {

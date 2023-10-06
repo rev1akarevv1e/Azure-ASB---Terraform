@@ -9,7 +9,7 @@ variable "name" {
 variable "environment" {
   type        = string
   default     = ""
-  description = "Environment (e.g. `prod`, `dev`, `staging`)."
+  description = "Environment (e.g. `prod`, `test`, `staging`)."
 }
 
 variable "cost_centre" {
@@ -20,8 +20,14 @@ variable "cost_centre" {
 
 variable "repository" {
   type        = string
-  default     = "link to github repo"
+  default     = ""
   description = "Terraform current module repo"
+
+  validation {
+    # regex(...) fails if it cannot find a match
+    condition     = can(regex("^https://", var.repository))
+    error_message = "The module-repo value must be a valid Git repo link."
+  }
 }
 
 variable "business_unit" {

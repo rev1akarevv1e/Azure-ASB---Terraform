@@ -8,7 +8,7 @@ variable "name" {
 
 variable "repository" {
   type        = string
-  default     = "https://github.com/clouddrove/terraform-azure-resource-group"
+  default     = ""
   description = "Terraform current module repo"
 
   validation {
