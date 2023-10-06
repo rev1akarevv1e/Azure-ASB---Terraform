@@ -32,39 +32,6 @@ It is also possible to implement versioning using git, please see the variable f
 
 ASCII like "back of the napkin" diagram for observability. 
 
-+-------------------------------------------------+|
-|             Observability Platform               |
-|                                                  |
-|  +-----------+    +---------+    +--------------+|  
-|  |  Metrics  |    |   Logs  |    |  Tracing      |  
-|  |   Store   |    |   Store |    |  Store        |
-|  +-----|-----+    +----|----+    +------|-------+|
-|        |              |               |          |
-|  +-----|-------------|---+    +-----|-----+      |
-|  |     |   Visualization |    |  Alerting |      |
-|  |     |      Tools      |    |  System   |      |
-|  |     +-----------------+    +-----------+      |
-|  |                                               |
-|  |          Data Collection & Processing         |
-|  |                                               |
-|  +-----------------|---------------------------=+|
-|                      |                           |
-|  +-----|------+    +--|--------------------+     |
-|  |  Observability    |  Logging & Metrics   |    |
-|  |  Agents/Collectors|  Collection Agents   |    |
-|  +------------------|-----------------------+    |
-|                    |                             |
-+------------------|-----------------------------=+|
-                   |                               |
-+------------------|------------------------------+|
-|  +---|------------------------------------------+|
-|  |  Data Sources                                 |
-|  |                                               |
-|  |  - Kubernetes cluster metrics/logs            |
-|  |  - Linux VM database logs/metrics             |
-|  |  - Azure resources metrics/logs               |
-|  |  - Custom application metrics/logs            |
-|  +----------------------------------------------+|
-|                                                  |
-+-------------------------------------------------+|
+<img width="381" alt="image" src="https://github.com/rev1akarevv1e/WK_task/assets/103734417/28668797-3cca-41d6-9b58-f91ea6e8a2e1">
+
 
