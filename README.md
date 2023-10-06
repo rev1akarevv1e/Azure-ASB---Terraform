@@ -5,6 +5,7 @@ Terraform
 Create two Azure Service Bus Namespaces (ASBN) in three environments (test, staging, production), ensure that: 
 
 ● each ASBN is provisioned in a dedicated Resource Group;  ✅
+
 ● each ASBN account has two Queues; - ✅
 
 ● each ASBN has tags that show the cost centre and a product name it belongs to; - ✅
