@@ -2,6 +2,11 @@ provider "azurerm" {
   features {}
 }
 
+
+#################################################
+# Define the resource groups for each service bus
+#################################################
+
 module "resource_group1" {
   source = "../../modules/resource_group"
 
@@ -25,10 +30,15 @@ module "resource_group2" {
   name     = "test2"
   location = "North Europe"
 
-  #resource lock
+  # resource lock
   resource_lock_enabled = true
   lock_level            = "CanNotDelete"
 }
+
+
+########################
+# Define the service bus 
+########################
 
 module "service_bus1" {
   source = "../../modules/service_bus"
@@ -36,11 +46,15 @@ module "service_bus1" {
   name        = "app"
   environment = "test"
   cost_centre = "test"
+  
+  # resource lock
   resource_lock_enabled = true
 
+  # select the resource group for the service bus
   resource_group_name = module.resource_group1.resource_group_name
   location            = module.resource_group1.resource_group_location
-
+  
+  # Define the number of queues
   queues = [
     {
       name = "queue1"
@@ -69,12 +83,17 @@ module "service_bus2" {
 
   name        = "app"
   environment = "test"
-  resource_lock_enabled = true
-  cost_centre = "test2"
 
+  # resource lock
+  resource_lock_enabled = true
+  
+  cost_centre = "test2"
+  
+  # select the resource group for the service bus
   resource_group_name = module.resource_group2.resource_group_name
   location            = module.resource_group2.resource_group_location
 
+  # define the number of queues 
   queues = [
     {
       name = "queue1"

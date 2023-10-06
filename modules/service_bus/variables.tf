@@ -20,7 +20,7 @@ variable "environment" {
 
 variable "repository" {
   type        = string
-  default     = ""
+  default     = "https://github.com/rev1akarevv1e/wk_task"
   description = "Terraform current module repo"
 
   validation {
