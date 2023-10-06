@@ -56,8 +56,8 @@ variable "tags" {
 
 variable "managedby" {
   type        = string
-  default     = "hello@clouddrove.com"
-  description = "ManagedBy, eg 'CloudDrove'."
+  default     = "hello@WealthKernel"
+  description = "ManagedBy, eg 'WealthKernel'."
 }
 
 variable "enabled" {

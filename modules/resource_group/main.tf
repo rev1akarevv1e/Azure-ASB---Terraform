@@ -1,8 +1,7 @@
-## Managed By : CloudDrove
-## Copyright @ CloudDrove. All Right Reserved.
+#############################
+#Module      : resource_group
+#############################
 
-#Module      : labels
-#Description : Terraform module to create consistent naming for multiple names.
 module "labels" {
   source  = "../../modules/labels"
 

@@ -1,3 +1,7 @@
+######################################
+# Provision the resources in this file
+######################################
+
 provider "azurerm" {
   features {}
 }

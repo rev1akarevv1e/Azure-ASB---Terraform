@@ -1,3 +1,7 @@
+#############################
+#Module      : labels
+#############################
+
 locals {
   label_order_defaults = {
     label_order = ["environment", "name", "cost_centre"]

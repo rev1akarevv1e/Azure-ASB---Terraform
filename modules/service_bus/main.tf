@@ -1,3 +1,7 @@
+#############################
+#Module      : service bus
+#############################
+
 locals {
   authorization_rules = [
     for rule in var.authorization_rules : merge({
