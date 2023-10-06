@@ -25,7 +25,7 @@ Instructions:
 3. run `terraform plan`
 4. check for any errors, and then `apply`.
 
-It is also possible to implement versioning using git, please see the variable file for the `repository` block.
+It is also possible to implement versioning using `git`, please see the variable file for the `repository` block.
 
 
 # WK_task 2
