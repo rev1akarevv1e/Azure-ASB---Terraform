@@ -1,4 +1,4 @@
-# WK_task
+# WK_task 1
 
 Terraform
 
@@ -27,3 +27,43 @@ Instructions:
 
 It is also possible to implement versioning using git, please see the variable file for the `repository` block.
 
+
+# WK_task 2
+
+ASCII like "back of the napkin" diagram for observability. 
+
++-------------------------------------------------+|
+|             Observability Platform               |
+|                                                  |
+|  +-----------+    +---------+    +--------------+|  
+|  |  Metrics  |    |   Logs  |    |  Tracing      |  
+|  |   Store   |    |   Store |    |  Store        |
+|  +-----|-----+    +----|----+    +------|-------+|
+|        |              |               |          |
+|  +-----|-------------|---+    +-----|-----+      |
+|  |     |   Visualization |    |  Alerting |      |
+|  |     |      Tools      |    |  System   |      |
+|  |     +-----------------+    +-----------+      |
+|  |                                               |
+|  |          Data Collection & Processing         |
+|  |                                               |
+|  +-----------------|---------------------------=+|
+|                      |                           |
+|  +-----|------+    +--|--------------------+     |
+|  |  Observability    |  Logging & Metrics   |    |
+|  |  Agents/Collectors|  Collection Agents   |    |
+|  +------------------|-----------------------+    |
+|                    |                             |
++------------------|-----------------------------=+|
+                   |                               |
++------------------|------------------------------+|
+|  +---|------------------------------------------+|
+|  |  Data Sources                                 |
+|  |                                               |
+|  |  - Kubernetes cluster metrics/logs            |
+|  |  - Linux VM database logs/metrics             |
+|  |  - Azure resources metrics/logs               |
+|  |  - Custom application metrics/logs            |
+|  +----------------------------------------------+|
+|                                                  |
++-------------------------------------------------+|
