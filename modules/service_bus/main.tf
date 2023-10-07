@@ -1,6 +1,7 @@
-#############################
-#Module      : service bus
-#############################
+###############################################
+#Module      : ASBN
+#Description : Terraform ASBN module variables.
+###############################################
 
 locals {
   authorization_rules = [

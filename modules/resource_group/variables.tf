@@ -1,5 +1,3 @@
-#Module      : Resource Group
-#Description : Terraform Resource Group module variables.
 variable "name" {
   type        = string
   default     = ""

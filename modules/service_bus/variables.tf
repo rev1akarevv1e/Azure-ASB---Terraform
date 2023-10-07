@@ -1,5 +1,3 @@
-#Module      : ASBN
-#Description : Terraform ASBN module variables.
 variable "name" {
   type        = string
   default     = ""
